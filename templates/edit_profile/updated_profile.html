@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+
+{% block body %}
+
+<div class="main-banner">
+    <title>Home</title>
+    <div class="jumbotron">
+        {% if first_name %}
+        <h1 class="display-1">Hello! {{ first_name }}</h1>
+        <p class="lead">Profile Updated!</p>
+        <hr class="my-2">
+        <p class="lead">
+        <p>First Name: {{ first_name }}</p>
+        <p>Last Name: {{ last_name }}</p>
+        <p>Email: {{ email }}</p>
+        </p>
+        {% endif %}
+        <!--            <a class="btn btn-primary btn-lg" href="{% url 'password_change' %}">Change password</a>-->
+        <a class="btn btn-primary btn-lg" href="{% url 'profile_update' %}">Edit Profile</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+{% endblock %}

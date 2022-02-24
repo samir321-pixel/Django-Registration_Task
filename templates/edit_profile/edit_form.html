@@ -1,0 +1,50 @@
+{% extends "website/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_title %}<h1>{{ title }}</h1>{% endblock %}
+
+{% block body %}
+<title>Edit Profile</title>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page"><h3>Edit Profile</h3></li>
+    </ol>
+</nav>
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="form-group clearfix">
+                    <label class="col-md-2 control-label text-right">First Name:</label>
+                    <input type="text" name="first_name" value={{ first_name }}>
+                </div>
+                <div class="form-group clearfix">
+                    <label class="col-md-2 control-label text-right">Last Name:</label>
+                    <input type="text" name="last_name" value={{ last_name }}>
+                </div>
+                <div class="form-group clearfix">
+                    <label class="col-md-2 control-label text-right">Email:</label>
+                    <input type="email" name="email" value={{ email }}>
+                </div>
+                <div class="submit-row">
+                    <input class="btn btn-primary" type="submit" value="Save" class="default">
+                    <a class="btn btn-primary" href="{% url 'profile_update' %}">Cancel</a>
+                </div>
+
+                <!--                <input class="btn btn-primary" type="submit" name="Send Mail">-->
+            </form>
+
+            <!--            <form method="post" action="profile_update/">{% csrf_token %}-->
+            <!--                <div>-->
+            <!--                </div>-->
+            <!--                <div class="submit-row">-->
+            <!--                    <input class="btn btn-primary" type="submit" value="Save" class="default">-->
+            <!--                    <a class="btn btn-primary" href="{% url 'profile_update' %}">Cancel</a>-->
+            <!--                </div>-->
+            <!--            </form>-->
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
