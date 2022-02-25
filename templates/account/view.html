@@ -13,7 +13,6 @@
         <p>Last Name: {{ request.user.last_name }}</p>
         <p>Email: {{ request.user.email }}</p>
         </p>
-        <!--            <a class="btn btn-primary btn-lg" href="{% url 'password_change' %}">Change password</a>-->
         <a class="btn btn-primary btn-lg" href="{% url 'profile_update' %}">Edit Profile</a>
         <a class="btn btn-primary btn-lg" href="{% url 'logout' %}">Logout</a>
         <a class="btn btn-primary btn-lg" href="{% url 'tasks' %}">Task</a>

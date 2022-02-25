@@ -30,5 +30,9 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='authn/logged_out.html'), name='logout'),
     path('password_change/done/', PasswordChangeDoneView.as_view(template_name='authn/password_change_done.html'),
          name='password_change_done'),
+    # path('password_reset/', PasswordChangeDoneView.as_view(template_name='authn/password_change_done.html'),
+    #      name='password_reset'),
+    # path('password_change/', PasswordChangeDoneView.as_view(template_name='authn/password_change_done.html'),
+    #      name='password_change'),
     path('profile_update/', views.UpdateProfileView, name='profile_update'),
 ]
