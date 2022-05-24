@@ -53,6 +53,8 @@ NAME = demo
 ```bash
 Provide HOST, PASSWORD, USER in Django_Registration/settings.py file
 ```
+ ![image](https://user-images.githubusercontent.com/65664404/169957210-484f5f1a-3091-43ff-aec4-4fefbffe1194.png)
+
 
 ## Apply the migrations:
 
