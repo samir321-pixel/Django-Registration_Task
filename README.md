@@ -39,6 +39,21 @@ git clone git@github.com:samir321-pixel/Django-Registration.git
 pip install -r requirements.txt
 ```
 
+## Postgres Plugin:
+
+```bash
+create a postgres container
+```
+
+```bash
+create a database inside postgres,
+NAME = demo
+```
+
+```bash
+Provide HOST, PASSWORD, USER in Django_Registration/settings.py file
+```
+
 ## Apply the migrations:
 
 ```bash
