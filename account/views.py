@@ -1,3 +1,6 @@
+import logging
+from datetime import datetime
+
 from django.shortcuts import render
 from Django_Registration import settings
 from .forms import RegisterForm
@@ -11,12 +14,16 @@ from django.urls import reverse
 from django.views.generic import FormView, View
 from django.contrib.auth.decorators import login_required
 from .forms import *
-
+import logging
 
 # Create your views here.
+logger = logging.getLogger(__name__)
+
 
 # Home Page View
 def home(request):
+    #logger.warning('Homepage was accessed at ' + str(datetime.now()) + ' hours!')
+    logger.warning("ANothing here")
     return render(request, template_name='website/home.html')
 
 
