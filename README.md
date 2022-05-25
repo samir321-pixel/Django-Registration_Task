@@ -3,13 +3,13 @@
 ## Technology Stack
 
 * Frontend
-  * HTML
-  * CSS
-  * Bootstrap
+    * HTML
+    * CSS
+    * Bootstrap
 * Backend
-  * Django
+    * Django
 * Database
-  * SQLite3
+    * SQLite3
 
 ## Tech Stack Involved
 
@@ -53,19 +53,21 @@ NAME = demo
 ```bash
 Provide HOST, PASSWORD, USER in Django_Registration/settings.py file
 ```
- ![image](https://user-images.githubusercontent.com/65664404/169957210-484f5f1a-3091-43ff-aec4-4fefbffe1194.png)
 
+![image](https://user-images.githubusercontent.com/65664404/169957210-484f5f1a-3091-43ff-aec4-4fefbffe1194.png)
 
 ## Apply the migrations:
 
 ```bash
 python manage.py migrate
 ```
+
 ## Create Superuser:
 
 ```bash
 python manage.py createsuperuser
 ```
+
 Add Your Name, Email & Password.
 
 ## Finally, run the development server:
@@ -76,3 +78,22 @@ python manage.py runserver
 
 The project will be available at **http://127.0.0.1:8000/**.
 
+## Celery Plugin
+
+```
+Celery 4.0+ does not officially support Windows yet.
+But it still works on Windows for some development/test purposes.
+Use eventlet instead as below:
+```
+
+# Command 1
+
+```bash
+celery -A Django_Registration worker -l info -P eventlet
+```
+
+# Command 2
+
+```bash
+celery -A Django_Registration beat -l info
+```
